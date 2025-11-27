@@ -5,10 +5,21 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
 
+  const validateEmail = (email: string) => {
+    const regex = /^(20\d{2})pgcsca(0(?:0[1-9]|[1-9]\d)|1[0-6]\d|170)@nitjsr\.ac\.in$/;
+    return regex.test(email);
+  };
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    console.log("Inside the supabase client");
 
+    if (!validateEmail(email)){
+      alert("Invalid email format. Use: 2024pgcsca011@nitjsr.ac.in");
+      return;
+    }
+
+    setLoading(true);
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
