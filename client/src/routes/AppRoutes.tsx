@@ -1,4 +1,3 @@
-import App from '../App'
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
 import Verify from '../pages/Verify'
