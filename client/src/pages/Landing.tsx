@@ -9,12 +9,6 @@ const Landing = () => {
         frameBorder="0"
         allowFullScreen
         scrolling="no"
-        ref={(el) => {
-          if (el) {
-            el.setAttribute("webkitallowfullscreen", "");
-            el.setAttribute("mozallowfullscreen", "");
-          }
-        }}
       ></iframe>
     </div>
   );
