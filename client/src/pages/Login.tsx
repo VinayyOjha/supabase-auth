@@ -23,7 +23,7 @@ export default function Login() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `https://supabase-auth-six-tawny.vercel.app/dashboard`,
+        emailRedirectTo: `${window.location.origin}/dashboard`,
       },
     });
 

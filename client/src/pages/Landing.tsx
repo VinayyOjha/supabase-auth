@@ -1,7 +1,23 @@
 const Landing = () => {
   return (
-    <div>Landing</div>
-  )
-}
+    <div>
+      Landing
+      <iframe
+        src="https://www.retrogames.cc/embed/16842-contra-force-usa.html"
+        width="600"
+        height="450"
+        frameBorder="0"
+        allowFullScreen
+        scrolling="no"
+        ref={(el) => {
+          if (el) {
+            el.setAttribute("webkitallowfullscreen", "");
+            el.setAttribute("mozallowfullscreen", "");
+          }
+        }}
+      ></iframe>
+    </div>
+  );
+};
 
-export default Landing
+export default Landing;

@@ -39,6 +39,7 @@ export default function Dashboard() {
       <p>You are logged in as: {session.user.email}</p>
 
       <button onClick={handleLogout}>Sign Out</button>
+      
     </div>
   );
 }
